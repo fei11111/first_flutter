@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// 类似RecorderableListView
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
