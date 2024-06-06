@@ -65,3 +65,6 @@ SliverFixedExtentList
 SliverPrototypeExtentList
 SliverFillViewport  //占整个页面
 SliverAppBar 
+SliverFillRemaining //包裹剩余视窗
+SliverPersistentHeader
+SliverGridDelegateWithMaxCrossAxisExtent
