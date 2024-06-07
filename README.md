@@ -68,3 +68,11 @@ SliverAppBar
 SliverFillRemaining //包裹剩余视窗
 SliverPersistentHeader
 SliverGridDelegateWithMaxCrossAxisExtent
+
+###状态 （状态传递）
+ListenableBuilder + ChangeNotifier  //相当于controller
+ValueNotifier
+传参 + 回传函数 + controller //用于继承层级比较少的
+InheritedWidget 或 InheritedModel  //可以模仿Theme.of(context) ,用于层级多（爷孙传递），可以再孙子里查到父容器所定义的变量
+
+Provider = ListenableBuilder + ChangeNotifier + InheritedWidget
