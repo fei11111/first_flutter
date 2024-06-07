@@ -15,6 +15,21 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+###动画
+####隐式动画  Animated... / TweenAnimationBuilder
+AnimatedCrossFade   //切换A/B组件、渐变效果
+AnimatedSwitcher    //切换多个组件、渐变效果
+AnimatedOpacity     //透明度改变
+TweenAnimationBuilder
+
+####显示动画  ...Transition / AnimatedBuilder
+FadeTransition ==== AnimatedOpacity //透明度改变
+AnimatedBuilder
+
+####自定义CustomPainter
+
+####框架
+
 
 ###滚动
 ListView 
