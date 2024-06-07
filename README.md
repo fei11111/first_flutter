@@ -21,14 +21,17 @@ AnimatedCrossFade   //切换A/B组件、渐变效果
 AnimatedSwitcher    //切换多个组件、渐变效果
 AnimatedOpacity     //透明度改变
 TweenAnimationBuilder
-
 ####显示动画  ...Transition / AnimatedBuilder
 FadeTransition ==== AnimatedOpacity //透明度改变
 AnimatedBuilder
-
 ####自定义CustomPainter
-
 ####框架
+
+###自由布局
+CustomMultiChildLayout + LayoutId 
+WidgetsBinding.instance.addPostFrameCallback(callback) //下一帧就会执行
+flow
+
 
 
 ###滚动
