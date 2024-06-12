@@ -4,6 +4,7 @@ import 'demo/animation_demo.dart';
 import 'demo/banner_demo.dart';
 import 'demo/collection_button.dart';
 import 'demo/diagonal_demo.dart';
+import 'demo/hover_demo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -80,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body:       AnimationDemo(),
+      body:       Center(child: HoverDemo()),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
