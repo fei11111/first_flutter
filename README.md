@@ -94,3 +94,10 @@ ValueNotifier
 InheritedWidget 或 InheritedModel  //可以模仿Theme.of(context) ,用于层级多（爷孙传递），可以再孙子里查到父容器所定义的变量
 
 Provider = ListenableBuilder + ChangeNotifier + InheritedWidget
+
+FittedBox //会自动放大缩小
+Transform.scale
+
+elevatedButton 实心
+outlinedButton 边框
+textButton 没边框
