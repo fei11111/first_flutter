@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -162,7 +163,7 @@ class MyPainter extends CustomPainter {
     var currentIndex = metrics.length * _controller.value;
     print("currentIndex = $currentIndex");
     var path = Path();
-    double startPoint = metrics.length / 4;
+    double startPoint = metrics.length / 4 + max(height / 2 - radius, 0);
     path.addPath(metrics.extractPath(startPoint, currentIndex + startPoint),
         Offset.zero);
     path.addPath(
