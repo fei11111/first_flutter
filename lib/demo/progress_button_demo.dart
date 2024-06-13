@@ -15,7 +15,7 @@ class ProgressButtonDemo extends StatelessWidget {
           width: 100,
           height: 50,
           duration: Duration(seconds: 5),
-          radius: 25,
+          radius: 10,
         ),
         SizedBox(height: 10),
         ProgressButton(
@@ -154,14 +154,12 @@ class MyPainter extends CustomPainter {
       ..strokeWidth = 2;
     rect = RRect.fromLTRBR(0, 0, width, height, Radius.circular(radius));
     var path = Path()..addRRect(rect);
-    metrics = path.computeMetrics(forceClosed: true).single;
+    metrics = path.computeMetrics().single;
   }
 
   @override
   void paint(Canvas canvas, Size size) {
-    canvas.drawRRect(rect, mPaint);
-    var currentIndex = metrics.length * _controller.value;
-    print("currentIndex = $currentIndex");
+     var currentIndex = metrics.length * _controller.value;
     var path = Path();
     double startPoint = metrics.length / 4 + max(height / 2 - radius, 0);
     path.addPath(metrics.extractPath(startPoint, currentIndex + startPoint),
@@ -169,6 +167,7 @@ class MyPainter extends CustomPainter {
     path.addPath(
         metrics.extractPath(0, currentIndex - metrics.length + startPoint),
         Offset.zero);
+    canvas.drawRRect(rect, mPaint);
     canvas.drawPath(path, mPathPaint);
   }
 
