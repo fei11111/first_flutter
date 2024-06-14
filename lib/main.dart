@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'demo/gallery_demo.dart';
 import 'demo/progress_button_demo.dart';
 
 void main() {
@@ -77,8 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-          child: Transform.scale(scale: 2.0, child: ProgressButtonDemo())),
+      body: GalleryDemo(),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
