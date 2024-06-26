@@ -16,12 +16,13 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ###动画
-####隐式动画  Animated... / TweenAnimationBuilder
+####隐式动画/全自动动画  Animated... / TweenAnimationBuilder
 AnimatedCrossFade   //切换A/B组件、渐变效果
-AnimatedSwitcher    //切换多个组件、渐变效果
+AnimatedSwitcher    //切换多个组件、渐变效果,,仅仅只是不同控件改变才会有动画效果，内容改变不会有，可以通过改变key就会有动画效果，child也可以传null
 AnimatedOpacity     //透明度改变
+AnimatedPadding 
 TweenAnimationBuilder
-####显示动画  ...Transition / AnimatedBuilder
+####显示动画/手动动画  ...Transition / AnimatedBuilder
 FadeTransition ==== AnimatedOpacity //透明度改变
 AnimatedBuilder
 ####自定义CustomPainter
