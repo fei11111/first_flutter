@@ -33,22 +33,27 @@ class _NumberDemoState extends State<NumberDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return TweenAnimationBuilder(
-      duration: const Duration(seconds: 1),
-      tween: Tween(end: _count),
-      builder: (BuildContext context, value, Widget? child) {
-        final whole = value ~/ 1;
-        final decimal = value - whole;
-        return Stack(children: [
-          Positioned(
-              top: -100 * decimal, //0~-100
-              child: Text("$whole", style: const TextStyle(fontSize: 100))),
-          Positioned(
-              top: 100 - 100 * decimal, //100~0
-              child:
-                  Text("${whole + 1}", style: const TextStyle(fontSize: 100)))
-        ]);
-      },
+    return Padding(
+      padding: const EdgeInsets.only(right: 80.0),
+      child: RepaintBoundary(
+        child: TweenAnimationBuilder(
+          duration: const Duration(seconds: 1),
+          tween: Tween(end: _count),
+          builder: (BuildContext context, value, Widget? child) {
+            final whole = value ~/ 1;
+            final decimal = value - whole;
+            return Stack(children: [
+              Positioned(
+                  top: -100 * decimal, //0~-100
+                  child: Text("$whole", style: const TextStyle(fontSize: 100))),
+              Positioned(
+                  top: 100 - 100 * decimal, //100~0
+                  child: Text("${whole + 1}",
+                      style: const TextStyle(fontSize: 100)))
+            ]);
+          },
+        ),
+      ),
     );
   }
 }

@@ -19,19 +19,19 @@ class _AnimationDemoState extends State<AnimationDemo> {
         child: Material(
           color: Colors.blue,
           elevation: 4,
-          shape: StadiumBorder(),
+          shape: const StadiumBorder(),
           child: InkWell(
-              customBorder: StadiumBorder(),
+              customBorder: const StadiumBorder(),
               onTap: () {
                 setState(() {
                   _big = !_big;
                 });
               },
               child:AnimatedSwitcher(
-                duration: Duration(seconds: 1),
+                duration: const Duration(seconds: 1),
                 child: _big
-                    ? Text("data")
-                    : Icon(Icons.arrow_right_alt)),
+                    ? const Text("data")
+                    : const Icon(Icons.arrow_right_alt)),
               )
         ));
   }

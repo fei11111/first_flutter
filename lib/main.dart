@@ -80,8 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Container(
               width: 200,
               height: 120,
-              color: Colors.blue,
-              child: NumberDemo())),
+              color: Colors.blueAccent,
+              child: const NumberDemo())),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
